@@ -29,17 +29,29 @@ Icons: Lucide-react
 Deployment Ready: Optimized for Netlify, Vercel, or static hosting
 
 ## 📁 Project Structure
+
 Dental-clinic/
+
 ├─ public/                 # Static assets (favicon)
+
 ├─ src/
+
 │  ├─ assets/              # Images, logos, 
+
 │  ├─ components/          # Reusable React components
+
 │  ├─ pages/               # Page-level components (Home, Services, Contact)
+
 │  ├─ styles/              # CSS / Tailwind config
+
 │  ├─ App.jsx              # Main app component
+
 │  ├─ main.jsx             # React entry point
+
 ├─ package.json
+
 ├─ vite.config.js
+
 ├─ README.md
 
 
@@ -48,6 +60,7 @@ Dental-clinic/
 Clone the repository
 
 git clone https://github.com/Zartasha-kanwal/Dental-clinic.git
+
 cd Dental-clinic
 
 Install dependencies
