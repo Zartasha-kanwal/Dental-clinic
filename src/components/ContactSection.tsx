@@ -10,8 +10,8 @@ const contactMethods = [
   {
     icon: Phone,
     label: "Call Us",
-    value: "+1 (234) 567-890",
-    href: "tel:+1234567890",
+    value: "+92 42 1234 5678",
+    href: "tel:+92 42 1234 5678",
     gradient: "from-primary to-primary/60",
   },
   {
@@ -24,7 +24,7 @@ const contactMethods = [
   {
     icon: MapPin,
     label: "Visit Us",
-    value: "123 Smile Street, Downtown",
+    value: "Plot 45, Gulberg II, Lahore, Pakistan",
     href: "#",
     gradient: "from-primary/80 to-accent/80",
   },
@@ -67,10 +67,10 @@ const ContactSection = () => {
         >
           <span className="section-badge mb-5">Contact</span>
           <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-5">
-            Get In <span className="text-gradient">Touch</span>
+            Book Your Appointment <span className="text-gradient">Today</span>
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto text-base leading-relaxed">
-            Ready to book? Contact us by phone, WhatsApp, or fill out the form below.
+            Limited same-day slots available.
           </p>
         </motion.div>
 
@@ -138,7 +138,7 @@ const ContactSection = () => {
                   background: "linear-gradient(155deg, hsl(200 80% 38%) 0%, hsl(200 85% 26%) 45%, hsl(168 55% 30%) 100%)",
                 }}
               />
-              {/* Animated decorative circles */}
+              {/* circles */}
               <div className="absolute inset-0 opacity-[0.06] pointer-events-none">
                 <div className="absolute -top-12 -right-12 w-56 h-56 rounded-full border-2 border-white" />
                 <div className="absolute bottom-8 left-8 w-32 h-32 rounded-full border border-white" />

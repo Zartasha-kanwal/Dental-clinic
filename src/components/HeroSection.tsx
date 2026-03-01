@@ -40,9 +40,9 @@ const HeroSection = () => {
           </motion.span>
 
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-[1.05] mb-8">
-            Pain-Free{" "}
+            Same-Day{" "}
             <span className="relative inline-block">
-              Dentistry
+              Pain
               <motion.span
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
@@ -55,14 +55,18 @@ const HeroSection = () => {
               />
             </span>
             <br />
-            <span className="italic font-light text-accent">in 60 Minutes</span>
+            <span className="italic font-light text-accent">
+              {" "}
+              Relief Guaranteed.
+            </span>
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/70 mb-10 font-body leading-relaxed max-w-lg font-light">
-            Modern technology, gentle touch, results you’ll see and feel immediately.
+            Emergency appointments available within 60 minutes. Modern, painless
+            treatment by certified dental specialists.
           </p>
 
-          {/* checklist */}
+          {/* list */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -98,7 +102,7 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp Us
+                Book Free Consultation
                 <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -110,33 +114,22 @@ const HeroSection = () => {
             >
               <a href="tel:+1234567890">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now
+                Emergency? Call Now
               </a>
             </Button>
           </motion.div>
 
-          {/* avatars */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.8 }}
             className="mt-14 flex items-center gap-5"
           >
-            <div className="flex -space-x-3">
-              {["S", "J", "P", "A", "M"].map((letter, i) => (
-                <div
-                  key={i}
-                  className="w-9 h-9 rounded-full bg-gradient-to-br from-primary/40 to-accent/40 backdrop-blur-sm border-2 border-primary-foreground/15 flex items-center justify-center text-primary-foreground text-xs font-semibold"
-                >
-                  {letter}
-                </div>
-              ))}
-            </div>
             <div className="text-primary-foreground/50 text-sm">
               <span className="text-primary-foreground/80 font-medium">
-                4.9/5
+                Open 7 Days
               </span>{" "}
-              from 200+ reviews
+              • 4.8★ Rated • 15,000+ Happy Patients
             </div>
           </motion.div>
         </motion.div>

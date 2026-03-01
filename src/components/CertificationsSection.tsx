@@ -2,54 +2,75 @@ import { motion } from "framer-motion";
 import { ShieldCheck, Award, BadgeCheck, Star } from "lucide-react";
 
 const certifications = [
-  { icon: ShieldCheck, label: "ADA Member", subtitle: "American Dental Association" },
-  { icon: Award, label: "ISO 9001", subtitle: "Certified Clinic" },
-  { icon: BadgeCheck, label: "NABH Accredited", subtitle: "Quality Healthcare" },
-  { icon: Star, label: "JCI Accredited", subtitle: "International Standards" },
-  { icon: ShieldCheck, label: "FDA Approved", subtitle: "Materials & Equipment" },
+  {
+    icon: ShieldCheck,
+    label: "PDA Member",
+    subtitle: "Pakistan Dental Association",
+  },
+  {
+    icon: BadgeCheck,
+    label: "PMDC Registered",
+    subtitle: "Pakistan Medical & Dental Council",
+  },
+  {
+    icon: Award,
+    label: "ISO 9001 Certified",
+    subtitle: "Quality Management System",
+  },
+  {
+    icon: Star,
+    label: "Certified Implant Center",
+    subtitle: "Advanced Implantology Training",
+  },
 ];
 
 const CertificationsSection = () => {
   return (
     <section className="py-20 md:py-28 aurora-bg relative overflow-hidden">
-      <div className="container mx-auto relative z-10">
+      <div className="container mx-auto relative z-10 px-6">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="text-center mb-16"
         >
-          <span className="section-badge mb-5">Credentials</span>
+          <span className="section-badge mb-5">Our Credentials</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Certified. Recognized. <span className="text-gradient">Trusted.</span>
+            Certified. Registered.{" "}
+            <span className="text-gradient">Trusted.</span>
           </h2>
-          <p className="text-muted-foreground max-w-md mx-auto text-base leading-relaxed">
-            Our clinic meets the highest international standards for dental care.
+          <p className="text-muted-foreground max-w-lg mx-auto text-base leading-relaxed">
+            We follow nationally approved standards and internationally
+            recognized dental protocols to ensure safe, ethical, and
+            high-quality care.
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-4xl mx-auto">
+        {/* Cards */}
+        <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
           {certifications.map((cert, i) => (
             <motion.div
               key={cert.label}
-              initial={{ opacity: 0, scale: 0.85 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08, type: "spring" }}
-              className="group"
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="group cursor-pointer"
             >
-              <div
-                className="glass-card rounded-2xl px-6 py-5 flex flex-col items-center text-center min-w-[140px] shimmer cursor-pointer transition-all duration-500 hover:scale-105"
-                style={{
-                  boxShadow: `0 0 8px hsl(200 80% 35% / 0.3), 0 0 4px hsl(168 60% 35% / 0.2)`,
-                }}
-              >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-[-5deg] transition-all duration-700 shadow-md">
-                  <cert.icon className="w-6 h-6 text-white" />
+              <div className="glass-card rounded-2xl px-8 py-6 flex flex-col items-center text-center min-w-[180px] transition-all duration-300 hover:-translate-y-2">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform duration-500">
+                  <cert.icon className="w-7 h-7 text-white" />
                 </div>
-                <span className="font-display text-sm font-bold text-foreground mb-0.5">{cert.label}</span>
-                <span className="text-[10px] text-muted-foreground uppercase tracking-widest">{cert.subtitle}</span>
+
+                <span className="font-display text-base font-bold text-foreground mb-1">
+                  {cert.label}
+                </span>
+
+                <span className="text-xs text-muted-foreground uppercase tracking-widest">
+                  {cert.subtitle}
+                </span>
               </div>
             </motion.div>
           ))}

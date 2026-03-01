@@ -9,7 +9,6 @@ import dental_implants_after from "../assets/dental-implants-after.jpg";
 import orthodontics_before from "../assets/orthodontic-before.jpg";
 import orthodontics_after from "../assets/orthodontic-after.jpg";
 
-
 const cases = [
   {
     label: "Teeth Whitening",
@@ -70,7 +69,8 @@ const BeforeAfterSection = () => {
             Before & <span className="text-gradient">After</span>
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto text-base leading-relaxed">
-            Real results from real patients. See the transformations for yourself.
+            Real results from real patients. See the transformations for
+            yourself.
           </p>
         </motion.div>
 
@@ -108,15 +108,17 @@ const BeforeAfterSection = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Before */}
                 <div className="relative group">
-                  <div className={`aspect-[4/3] rounded-2xl bg-gradient-to-br ${cases[activeIndex].beforeColor} flex items-center justify-center relative overflow-hidden`}>
+                  <div
+                    className={`aspect-[4/3] rounded-2xl bg-gradient-to-br ${cases[activeIndex].beforeColor} flex items-center justify-center relative overflow-hidden`}
+                  >
                     <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
                       <div className="absolute top-4 right-4 w-24 h-24 rounded-full border border-foreground" />
                     </div>
                     <img
-  src={cases[activeIndex].before}
-  alt={`${cases[activeIndex].label} before`}
-  className="w-full h-full object-cover"
-/>
+                      src={cases[activeIndex].before}
+                      alt={`${cases[activeIndex].label} before`}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="absolute top-3 left-3 bg-foreground/80 text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
                     Before
@@ -125,15 +127,17 @@ const BeforeAfterSection = () => {
 
                 {/* After */}
                 <div className="relative group">
-                  <div className={`aspect-[4/3] rounded-2xl bg-gradient-to-br ${cases[activeIndex].afterColor} flex items-center justify-center relative overflow-hidden shimmer`}>
+                  <div
+                    className={`aspect-[4/3] rounded-2xl bg-gradient-to-br ${cases[activeIndex].afterColor} flex items-center justify-center relative overflow-hidden shimmer`}
+                  >
                     <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
                       <div className="absolute bottom-4 left-4 w-20 h-20 rounded-full border border-primary" />
                     </div>
                     <img
-  src={cases[activeIndex].after}
-  alt={`${cases[activeIndex].label} after`}
-  className="w-full h-full object-cover"
-/>
+                      src={cases[activeIndex].after}
+                      alt={`${cases[activeIndex].label} after`}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="absolute top-3 left-3 bg-gradient-to-r from-primary to-accent text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
                     After
@@ -145,12 +149,16 @@ const BeforeAfterSection = () => {
               <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <h3 className="font-display text-xl font-bold text-foreground">{cases[activeIndex].label}</h3>
+                    <h3 className="font-display text-xl font-bold text-foreground">
+                      {cases[activeIndex].label}
+                    </h3>
                     <span className="text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/8 border border-primary/12 rounded-full px-3 py-0.5">
                       {cases[activeIndex].tag}
                     </span>
                   </div>
-                  <p className="text-muted-foreground text-sm">{cases[activeIndex].description}</p>
+                  <p className="text-muted-foreground text-sm">
+                    {cases[activeIndex].description}
+                  </p>
                 </div>
                 <a
                   href="#contact"

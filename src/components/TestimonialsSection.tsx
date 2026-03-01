@@ -3,68 +3,68 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    text: "Dr. Patel made my smile makeover completely painless — highly recommended! The entire team was so friendly and professional throughout.",
+    name: "Fatima Noor",
+    text: "Dr. Ahmed Raza Khan treated my severe tooth pain the same day. Completely painless and extremely professional experience.",
     rating: 5,
-    role: "Smile Makeover Patient",
-    initials: "SM",
-    highlight: "Completely painless",
-    service: "Smile Makeover",
-    doctor: "Dr. Ananya Patel",
+    role: "Root Canal Patient",
+    initials: "FN",
+    highlight: "Same-day pain relief",
+    service: "Root Canal Treatment",
+    doctor: "Dr. Ahmed Raza Khan",
   },
   {
-    name: "James Rodriguez",
-    text: "I got dental implants here and couldn't be happier. Dr. Holloway ensured zero pain during the procedure and the results look natural.",
+    name: "Usman Tariq",
+    text: "I got dental implants here and the results look completely natural. Dr. Ahmed explained everything clearly and made the procedure stress-free.",
     rating: 5,
     role: "Implant Patient",
-    initials: "JR",
-    highlight: "Zero pain and natural results",
+    initials: "UT",
+    highlight: "Natural-looking results",
     service: "Dental Implants",
-    doctor: "Dr. James Holloway",
+    doctor: "Dr. Ahmed Raza Khan",
   },
   {
-    name: "Priya Sharma",
-    text: "Dr. Martinez’s teeth whitening procedure was quick and comfortable. My teeth are brighter than ever, and the results exceeded my expectations!",
+    name: "Areeba Malik",
+    text: "Dr. Ayesha Siddiqui did my teeth whitening and the difference is incredible. The process was quick, comfortable, and worth it.",
     rating: 5,
     role: "Teeth Whitening Patient",
-    initials: "PS",
-    highlight: "Brighter than ever",
+    initials: "AM",
+    highlight: "Noticeably brighter smile",
     service: "Teeth Whitening",
-    doctor: "Dr. Sophia Martinez",
+    doctor: "Dr. Ayesha Siddiqui",
   },
   {
-    name: "David Chen",
-    text: "Professional orthodontic care from Dr. Reynolds. My invisible aligners fit perfectly, and follow-ups keep everything on track.",
+    name: "Hassan Rauf",
+    text: "Dr. Hira Malik handled my clear aligner treatment perfectly. The aligners fit comfortably and my smile is improving every month.",
     rating: 5,
     role: "Orthodontic Patient",
-    initials: "DC",
-    highlight: "Perfect fit aligners",
-    service: "Orthodontics",
-    doctor: "Dr. Ethan Reynolds",
+    initials: "HR",
+    highlight: "Comfortable aligners",
+    service: "Clear Aligners",
+    doctor: "Dr. Hira Malik",
   },
   {
-    name: "Emily Brooks",
-    text: "Dr. Chen made my child’s first dental visit enjoyable and stress-free. Exceptional pediatric care and very gentle approach.",
+    name: "Zainab Ahmed",
+    text: "Dr. Bilal Mahmood made my routine extraction completely stress-free. Very gentle and reassuring throughout.",
     rating: 5,
-    role: "Pediatric Patient",
-    initials: "EB",
-    highlight: "Stress-free dental visit",
-    service: "Children’s Dentistry",
-    doctor: "Dr. Olivia Chen",
+    role: "General Dentistry Patient",
+    initials: "ZA",
+    highlight: "Stress-free procedure",
+    service: "Tooth Extraction",
+    doctor: "Dr. Bilal Mahmood",
   },
   {
-    name: "Marcus Okafor",
-    text: "Dr. Grant performed my oral surgery flawlessly. Pain-free, efficient, and I felt completely safe throughout the procedure.",
+    name: "Ali Hamza",
+    text: "From consultation to treatment, everything was handled professionally. I highly recommend Dr. Ahmed for advanced dental care.",
     rating: 5,
-    role: "Oral Surgery Patient",
-    initials: "MO",
-    highlight: "Pain-free and efficient",
-    service: "Oral & Maxillofacial Surgery",
-    doctor: "Dr. Michael Grant",
+    role: "Smile Makeover Patient",
+    initials: "AH",
+    highlight: "Highly professional care",
+    service: "Smile Makeover",
+    doctor: "Dr. Ahmed Raza Khan",
   },
 ];
 
-const TestimonialCard = ({ t }: { t: (typeof testimonials)[0] }) => (
+const TestimonialCard = ({ t }) => (
   <div
     className="w-[200px] lg:w-[380px] shrink-0 rounded-[2rem] lg:p-7 p-3 relative overflow-hidden group transition-all duration-500 text-white"
     style={{
@@ -72,7 +72,6 @@ const TestimonialCard = ({ t }: { t: (typeof testimonials)[0] }) => (
         "linear-gradient(160deg, hsl(200 80% 42%) 0%, hsl(200 80% 28%) 50%, hsl(168 60% 32%) 100%)",
     }}
   >
-    {/* rings */}
     <div className="absolute inset-0 opacity-[0.06] pointer-events-none">
       <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full border-2 border-white" />
       <div className="absolute bottom-4 left-4 w-16 h-16 rounded-full border border-white" />
@@ -97,11 +96,11 @@ const TestimonialCard = ({ t }: { t: (typeof testimonials)[0] }) => (
     <div className="h-px lg:mb-5 mb-2 bg-white/40" />
 
     <div className="flex items-center gap-3">
-      <div className="lg:w-10 lg:h-10 h-8 w-8 rounded-full flex items-center justify-center font-semibold g:text-sm text-xs bg-white/15 text-white backdrop-blur-sm group-hover:scale-110 transition-transform duration-500">
+      <div className="lg:w-10 lg:h-10 h-8 w-8 rounded-full flex items-center justify-center font-semibold text-xs bg-white/15 text-white backdrop-blur-sm group-hover:scale-110 transition-transform duration-500">
         {t.initials}
       </div>
       <div>
-        <span className="lg:text-sm text-[10px]  font-semibold block text-white">
+        <span className="lg:text-sm text-[10px] font-semibold block text-white">
           {t.name}
         </span>
         <span className="text-xs text-white/50">{t.role}</span>
@@ -112,7 +111,6 @@ const TestimonialCard = ({ t }: { t: (typeof testimonials)[0] }) => (
 
 const TestimonialsSection = () => {
   const row1 = [...testimonials, ...testimonials];
-  
 
   return (
     <section
@@ -124,7 +122,7 @@ const TestimonialsSection = () => {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.3 }}
           className="text-center mb-16"
         >
           <span className="section-badge mb-5">Testimonials</span>
@@ -132,12 +130,12 @@ const TestimonialsSection = () => {
             Loved by Our <span className="text-gradient">Patients</span>
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto text-base leading-relaxed">
-            Hear from real people who trust us with their smiles.
+            Hear from real patients who trust our team with their smiles.
           </p>
         </motion.div>
       </div>
 
-      {/* Marquee row 1 */}
+      {/* Marquee Row */}
       <div className="relative mb-5">
         <div className="marquee-track">
           {row1.map((t, i) => (
@@ -145,9 +143,6 @@ const TestimonialsSection = () => {
           ))}
         </div>
       </div>
-
-      
-     
     </section>
   );
 };

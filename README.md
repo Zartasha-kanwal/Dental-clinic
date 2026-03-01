@@ -1,10 +1,8 @@
-# BrightSmile Dental Studio
+# BrightSmile Dental Clinic Website
 
 BrightSmile Dental is a modern, responsive dental clinic website built with React and Vite. It showcases services, doctors, testimonials, and allows patients to book appointments seamlessly. Designed for high performance, ease of use, and a professional online presence.
 
-
 ![BrightSmile Dental Hero](https://github.com/Zartasha-kanwal/Dental-clinic/raw/main/public/Hero.png)
-
 
 ## 🚀 Features
 
@@ -57,7 +55,6 @@ Dental-clinic/
 ├─ vite.config.js
 
 ├─ README.md
-
 
 ## 🏗 Installation
 

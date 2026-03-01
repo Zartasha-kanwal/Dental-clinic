@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { CreditCard, ShieldCheck } from "lucide-react";
 
 const insurancePartners = [
-  "Aetna",
-  "Cigna",
-  "MetLife",
-  "Delta Dental",
-  "Guardian",
-  "United Healthcare",
-  "Humana",
-  "BlueCross",
+  "EFU Life",
+  "Jubilee Life",
+  "Adamjee Insurance",
+  "Askari Health",
+  "State Life",
+  "Pak-Qatar Takaful",
+  "IGI Insurance",
+  "TPL Insurance",
 ];
 
 const InsuranceSection = () => {
@@ -28,10 +28,10 @@ const InsuranceSection = () => {
           </span>
           <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-3">
             We Accept Most Major{" "}
-            <span className="text-gradient">Insurance Plans</span>
+            <span className="text-gradient">Insurance Plans</span> in Pakistan
           </h2>
           <p className="text-muted-foreground text-sm max-w-md mx-auto">
-            Affordable care with flexible payment options. 0% financing
+            Affordable dental care with flexible payment options. 0% financing
             available.
           </p>
         </motion.div>

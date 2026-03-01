@@ -1,150 +1,177 @@
 import { motion } from "framer-motion";
-import { Award, GraduationCap, Calendar, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-const doctors = [
+const leadDoctor = {
+  name: "Dr. Ahmed Raza Khan",
+  qualifications: "MDS (Operative Dentistry & Endodontics)",
+  role: "Founder & Lead Dental Surgeon",
+  experience: "14+ Years Experience",
+  highlight: "3,800+ Successful Procedures",
+  specialization: "Painless Root Canal & Smile Makeovers",
+  bio: "Dr. Ahmed Raza Khan is the founder and chief dental surgeon at BrightSmile Dental. With over 14 years of experience, he has successfully treated more than 3,800 patients using modern, minimally invasive techniques. He specializes in same-day root canal treatments, smile makeovers, and advanced restorative procedures with a strong focus on patient comfort and long-term results.",
+  initials: "AK",
+  gradient: "from-blue-600 to-blue-500",
+};
+
+const supportingDoctors = [
   {
-    name: "Dr. Ananya Patel",
-    qualifications: "BDS, MDS (Prosthodontics)",
-    experience: "18+ Years",
-    specialization: "Cosmetic & Restorative Dentistry",
-    bio: "A pioneer in smile makeovers with advanced training from NYU College of Dentistry. Dr. Patel has transformed over 5,000 smiles using cutting-edge techniques.",
-    initials: "AP",
+    name: "Dr. Ayesha Siddiqui",
+    qualifications: "BDS (Cosmetic Dentistry)",
+    experience: "8+ Years Experience",
+    specialization: "Teeth Whitening & Veneers",
+    bio: "Focused on aesthetic dentistry and natural-looking smile enhancements using modern cosmetic techniques.",
+    initials: "AS",
     gradient: "from-blue-500 to-blue-400",
   },
   {
-    name: "Dr. James Holloway",
-    qualifications: "BDS, MDS (Orthodontics), FICOI",
-    experience: "12+ Years",
-    specialization: "Implantology & Orthodontics",
-    bio: "Board-certified implantologist and Fellow of the ICOI. Dr. Holloway specializes in full-mouth rehabilitation and invisible aligner treatments.",
-    initials: "JH",
-    gradient: "from-blue-600 to-blue-500",
-  },
-  {
-    name: "Dr. Sophia Martinez",
-    qualifications: "DDS, MS (Endodontics)",
-    experience: "10+ Years",
-    specialization: "Root Canal & Microscope Dentistry",
-    bio: "Specialist in painless root canal treatments using advanced microscopic technology for precision and comfort-focused care.",
-    initials: "SM",
-    gradient: "from-blue-400 to-blue-300",
-  },
-  {
-    name: "Dr. Ethan Reynolds",
-    qualifications: "DDS (Periodontics)",
-    experience: "14+ Years",
-    specialization: "Gum Surgery & Laser Dentistry",
-    bio: "Expert in laser-assisted gum treatments and periodontal regeneration procedures with minimally invasive techniques.",
-    initials: "ER",
-    gradient: "from-blue-700 to-blue-500",
-  },
-  {
-    name: "Dr. Olivia Chen",
-    qualifications: "BDS, MDS (Pediatric Dentistry)",
-    experience: "9+ Years",
-    specialization: "Children’s Dentistry",
-    bio: "Dedicated to creating a stress-free dental experience for children with preventive care and behavioral management expertise.",
-    initials: "OC",
+    name: "Dr. Bilal Mahmood",
+    qualifications: "BDS (General Dentistry)",
+    experience: "6+ Years Experience",
+    specialization: "Preventive & Family Dentistry",
+    bio: "Specialist in routine checkups, painless extractions, and comprehensive preventive dental care.",
+    initials: "BM",
     gradient: "from-blue-500 to-blue-400",
   },
   {
-    name: "Dr. Michael Grant",
-    qualifications: "DDS, MBA (Oral Surgery)",
-    experience: "16+ Years",
-    specialization: "Oral & Maxillofacial Surgery",
-    bio: "Specialist in wisdom tooth extractions, facial trauma care, and advanced surgical procedures with hospital-based training.",
-    initials: "MG",
-    gradient: "from-blue-600 to-blue-400",
+    name: "Dr. Hira Malik",
+    qualifications: "MDS (Orthodontics)",
+    experience: "10+ Years Experience",
+    specialization: "Braces & Clear Aligners",
+    bio: "Expert in modern orthodontic treatments including clear aligners and advanced brace systems for teens and adults.",
+    initials: "HM",
+    gradient: "from-blue-500 to-blue-400",
   },
 ];
 
 const DoctorsSection = () => {
   return (
-    <section id="doctors" className="py-20 bg-section-gradient noise-overlay relative overflow-hidden">
-      <div className="floating-shape w-[500px] h-[500px] -top-60 -left-60 bg-primary" />
-      <div className="floating-shape w-80 h-80 bottom-10 -right-40 bg-accent" />
-
-      <div className="container mx-auto relative z-10">
+    <section
+      id="doctors"
+      className="py-24 bg-section-gradient noise-overlay relative overflow-hidden"
+    >
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.7 }}
           className="text-center mb-20"
         >
           <span className="section-badge mb-5">Our Experts</span>
-          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-5">
-            Meet Our <span className="text-gradient">Doctors</span>
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-5">
+            Meet Our <span className="text-gradient">Lead Specialist</span>
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto text-base leading-relaxed">
-            World-class dental professionals committed to your perfect smile.
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Experienced dental professionals dedicated to delivering painless,
+            modern, and trusted care.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
-          {doctors.map((doc, i) => (
+        {/* Lead Doctor */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="max-w-5xl mx-auto mb-20 cursor-pointer"
+        >
+          <div className="gradient-border-card rounded-[2rem] overflow-hidden">
+            <div className="glass-card rounded-[2rem] p-10 md:p-14">
+              <div className="grid md:grid-cols-3 gap-10 items-center">
+                <div
+                  className={`w-40 h-40 rounded-3xl bg-gradient-to-br ${leadDoctor.gradient} flex items-center justify-center shadow-xl`}
+                >
+                  <span className="text-5xl font-bold text-white font-display">
+                    {leadDoctor.initials}
+                  </span>
+                </div>
+
+                <div className="md:col-span-2">
+                  <h3 className="font-display text-3xl font-bold mb-2">
+                    {leadDoctor.name}
+                  </h3>
+
+                  <p className="text-primary font-medium mb-2">
+                    {leadDoctor.role}
+                  </p>
+
+                  <p className="text-muted-foreground mb-4 text-sm">
+                    {leadDoctor.qualifications}
+                  </p>
+
+                  <p className="text-muted-foreground mb-4">
+                    {leadDoctor.experience} • {leadDoctor.specialization}
+                  </p>
+
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    {leadDoctor.bio}
+                  </p>
+
+                  <div className="flex items-center gap-6 flex-wrap">
+                    <span className="text-sm font-semibold text-accent">
+                      {leadDoctor.highlight}
+                    </span>
+
+                    <a
+                      href="#contact"
+                      className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-sm font-medium hover:opacity-90 transition"
+                    >
+                      Book Appointment
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Supporting Doctors */}
+        <div className="text-center mb-12">
+          <h3 className="font-display text-2xl md:text-3xl font-bold">
+            Our Dental Specialists
+          </h3>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {supportingDoctors.map((doc, i) => (
             <motion.div
               key={doc.name}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="group"
             >
               <div className="gradient-border-card rounded-[2rem] overflow-hidden cursor-pointer">
-                <div className="glass-card rounded-[2rem] p-7 md:p-9 relative overflow-hidden">
-                  {/* Decorative rings */}
-                  <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
-                    <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full border-2 border-foreground" />
-                    <div className="absolute bottom-8 left-8 w-24 h-24 rounded-full border border-foreground" />
-                  </div>
-
-                  {/* Avatar + Name */}
-                  <div className="flex items-start gap-5 mb-6 relative z-10">
-                    <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br ${doc.gradient} flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 group-hover:rotate-[-3deg] transition-all duration-700`}>
-                      <span className="text-2xl md:text-3xl font-bold text-white font-display">{doc.initials}</span>
+                <div className="glass-card rounded-[2rem] p-8">
+                  <div className="flex items-start gap-5 mb-4">
+                    <div
+                      className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${doc.gradient} flex items-center justify-center`}
+                    >
+                      <span className="text-2xl font-bold text-white font-display">
+                        {doc.initials}
+                      </span>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-1">{doc.name}</h3>
-                      <p className="text-primary text-sm font-medium mb-2">{doc.qualifications}</p>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-widest text-accent bg-accent/8 border border-accent/12 rounded-full px-3 py-0.5">
-                          <Calendar className="w-3 h-3" />
-                          {doc.experience}
-                        </span>
-                        <span className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/8 border border-primary/12 rounded-full px-3 py-0.5">
-                          <GraduationCap className="w-3 h-3" />
-                          {doc.specialization}
-                        </span>
-                      </div>
+
+                    <div>
+                      <h4 className="font-display text-xl font-bold">
+                        {doc.name}
+                      </h4>
+
+                      <p className="text-primary text-sm">
+                        {doc.qualifications}
+                      </p>
+
+                      <p className="text-xs text-muted-foreground mt-1">
+                        {doc.experience} • {doc.specialization}
+                      </p>
                     </div>
                   </div>
 
-                  {/* Bio */}
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6 relative z-10">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {doc.bio}
                   </p>
-
-                  {/* Divider */}
-                  <div className="divider-gradient opacity-100s mb-5" />
-
-                  {/* Stats row */}
-                  <div className="flex items-center gap-4 relative z-10">
-                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                      <Award className="w-3.5 h-3.5 text-primary" />
-                      <span>Board Certified</span>
-                    </div>
-                    <div className="w-px h-3 bg-border" />
-                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                      <span>5000+ Procedures</span>
-                    </div>
-                    <div className="ml-auto">
-                      <a href="#contact" className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80 transition-colors group/link">
-                        Book Appointment
-                        <ArrowRight className="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" />
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </div>
             </motion.div>

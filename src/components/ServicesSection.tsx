@@ -1,12 +1,19 @@
 import { motion } from "framer-motion";
-import { Smile, ShieldCheck, Stethoscope, Zap, HeartPulse, ArrowRight } from "lucide-react";
+import {
+  Smile,
+  ShieldCheck,
+  Stethoscope,
+  Zap,
+  HeartPulse,
+  ArrowRight,
+} from "lucide-react";
 import { useState } from "react";
 
 const services = [
   {
     icon: Smile,
     title: "Teeth Whitening",
-    description: "Get a brighter smile in just one visit. Safe, fast, and guaranteed to turn heads.",
+    description: "Get a visibly brighter smile in just one session.",
     tag: "Popular",
     gradient: "from-primary to-accent",
     detail: "Professional-grade whitening in just 60 minutes",
@@ -14,21 +21,22 @@ const services = [
   {
     icon: ShieldCheck,
     title: "Root Canal",
-    description: "Pain-free root canal using modern sedation techniques. Save your tooth without the fear.",
+    description: "Save your natural tooth in a single painless visit.",
     gradient: "from-accent to-primary/70",
     detail: "99% success rate with gentle sedation options",
   },
   {
     icon: Stethoscope,
     title: "General Checkups",
-    description: "Routine exams and cleanings to maintain your oral health year-round.",
+    description:
+      "Routine exams and cleanings to maintain your oral health year-round.",
     gradient: "from-primary/80 to-accent/80",
     detail: "Comprehensive exam with digital X-rays included",
   },
   {
     icon: Zap,
     title: "Dental Implants",
-    description: "Permanent solutions for missing teeth that look and feel completely natural.",
+    description: "Permanent, natural-looking tooth replacement.",
     tag: "Advanced",
     gradient: "from-accent/80 to-primary",
     detail: "Lifetime warranty on all implant procedures",
@@ -36,7 +44,7 @@ const services = [
   {
     icon: HeartPulse,
     title: "Orthodontics",
-    description: "Invisible braces for confident smiles fast, discreet, and effective.",
+    description: "Straighten your teeth discreetly and comfortably.",
     gradient: "from-primary to-accent/60",
     detail: "Invisible aligners starting from $99/month",
   },
@@ -46,12 +54,14 @@ const ServicesSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="services" className="py-28 md:py-40 bg-section-gradient noise-overlay relative overflow-hidden">
+    <section
+      id="services"
+      className="py-28 md:py-40 bg-section-gradient noise-overlay relative overflow-hidden"
+    >
       <div className="floating-shape w-[600px] h-[600px] top-10 -right-72 bg-primary" />
       <div className="floating-shape w-80 h-80 bottom-20 -left-40 bg-accent" />
 
-      <div className="container mx-auto relative z-10"
-      >
+      <div className="container mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +107,9 @@ const ServicesSection = () => {
                   />
                   <div
                     className={`relative w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${s.gradient} flex items-center justify-center shrink-0 transition-all duration-700 ${
-                      hoveredIndex === i ? "scale-110 rotate-[-5deg] shadow-2xl" : "shadow-md"
+                      hoveredIndex === i
+                        ? "scale-110 rotate-[-5deg] shadow-2xl"
+                        : "shadow-md"
                     }`}
                   >
                     <s.icon className="w-7 h-7 text-white" />
@@ -107,14 +119,18 @@ const ServicesSection = () => {
                 {/* Content */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-3 mb-1">
-                    <h3 className="font-display text-lg md:text-xl font-semibold text-foreground">{s.title}</h3>
+                    <h3 className="font-display text-lg md:text-xl font-semibold text-foreground">
+                      {s.title}
+                    </h3>
                     {s.tag && (
                       <span className="text-[10px] font-semibold uppercase tracking-widest text-primary bg-primary/8 border border-primary/12 rounded-full px-3 py-0.5">
                         {s.tag}
                       </span>
                     )}
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{s.description}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {s.description}
+                  </p>
                   <motion.div
                     initial={false}
                     animate={{

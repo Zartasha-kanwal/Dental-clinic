@@ -11,8 +11,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-10 mb-14">
           <div>
             <div className="flex items-center gap-2.5 mb-5">
-              <img src={logo} alt="BrightSmile Dental Logo" className="w-10 h-10" />
-             
+              <img
+                src={logo}
+                alt="BrightSmile Dental Logo"
+                className="w-10 h-10"
+              />
+
               <span className="font-display text-xl font-bold">
                 BrightSmile Dental
               </span>
@@ -55,7 +59,7 @@ const Footer = () => {
                   href="tel:+1234567890"
                   className="hover:text-primary-foreground transition-colors"
                 >
-                  +1 (234) 567-890
+                  +92 42 1234 5678
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -66,14 +70,16 @@ const Footer = () => {
                   href="mailto:hello@brightsmile.com"
                   className="hover:text-primary-foreground transition-colors"
                 >
-                  hello@brightsmile.com
+                  hello@brightsmile.com.pk
                 </a>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-8 h-8 rounded-lg bg-primary-foreground/5 flex items-center justify-center shrink-0 mt-0.5">
                   <MapPin className="w-4 h-4" />
                 </div>
-                <span>123 Smile Street, Downtown, New Haven, CA 90210</span>
+                <span>
+                  1Plot 45, Main Boulevard, Gulberg II Lahore, Punjab, Pakistan
+                </span>
               </div>
             </div>
           </div>
