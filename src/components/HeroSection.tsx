@@ -127,7 +127,7 @@ const HeroSection = () => {
           >
             <div className="text-primary-foreground/50 text-sm">
               <span className="text-primary-foreground/80 font-medium">
-                Open 7 Days
+                Open 6 Days
               </span>{" "}
               • 4.8★ Rated • 15,000+ Happy Patients
             </div>
